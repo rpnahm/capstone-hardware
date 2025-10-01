@@ -15,7 +15,7 @@
 			)
 		)
 		(property "Value" "NRF52840-QFAA-R7"
-			(at -1.27 -3.81 0)
+			(at 8.382 7.112 0)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -115,8 +115,8 @@
 		)
 		(symbol "NRF52840-QFAA-R7_1_0"
 			(rectangle
-				(start 38.1 5.08)
-				(end 7.62 -66.04)
+				(start 7.62 5.08)
+				(end 38.1 -66.04)
 				(stroke
 					(width 0)
 					(type solid)
