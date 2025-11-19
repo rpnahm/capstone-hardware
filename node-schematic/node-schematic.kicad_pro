@@ -58,7 +58,40 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|199270000|54851250|cc53b5f1-438b-4c23-aee3-b97ba50fed79|df37e259-9dde-4b39-ad43-54c8908af03e",
+          ""
+        ],
+        [
+          "clearance|199270000|55351250|cc53b5f1-438b-4c23-aee3-b97ba50fed79|39a6da1f-fa81-4881-9bae-4d1991f38ad0",
+          ""
+        ],
+        [
+          "clearance|200170000|54351250|cc53b5f1-438b-4c23-aee3-b97ba50fed79|35df9b57-a801-4a64-9457-87dc4540a188",
+          ""
+        ],
+        [
+          "clearance|200170000|54851250|cc53b5f1-438b-4c23-aee3-b97ba50fed79|83c2e0fe-c8d4-48f8-a349-b0034500be6e",
+          ""
+        ],
+        [
+          "clearance|200170000|55351250|cc53b5f1-438b-4c23-aee3-b97ba50fed79|e54b1e71-9bc9-47f8-906e-3b876aafb201",
+          ""
+        ],
+        [
+          "clearance|200170000|55648750|cc53b5f1-438b-4c23-aee3-b97ba50fed79|f89c539e-a08e-4210-bdef-5a70c9babf07",
+          ""
+        ],
+        [
+          "courtyards_overlap|197025000|52955000|0e62add7-c78a-4db2-a41d-cfbb880e831b|5be3d1c9-470d-4a31-a3bd-c1dbf12fa77b",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|199750000|100212500|72410a85-1b62-40c8-8366-ffc97b015c86|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -131,7 +164,7 @@
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.6,
         "min_text_thickness": 0.08,
@@ -189,7 +222,8 @@
       "track_widths": [
         0.0,
         0.15,
-        0.2
+        0.2,
+        0.25
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -526,19 +560,15 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "VDD"
+        "pattern": "^[Vv].*$"
       },
       {
         "netclass": "Power",
-        "pattern": "GND"
+        "pattern": "^[Gg].*$"
       },
       {
         "netclass": "Signal",
-        "pattern": "^(?!VDD(?:$|[-])|GND(?:$|[-])|VBUS(?:$|[-])).+$"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "VBUS"
+        "pattern": "^(?![VvGg]).+"
       }
     ]
   },
@@ -547,7 +577,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "C:/Users/rpnpa/Downloads/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -561,13 +591,13 @@
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
-      "field_delimiter": ",",
+      "field_delimiter": ";",
       "keep_line_breaks": false,
       "keep_tabs": false,
-      "name": "CSV",
+      "name": "Semicolons",
       "ref_delimiter": ",",
       "ref_range_delimiter": "",
-      "string_delimiter": "\""
+      "string_delimiter": "'"
     },
     "bom_presets": [],
     "bom_settings": {
@@ -691,6 +721,60 @@
           "group_by": false,
           "label": "STANDARD",
           "name": "STANDARD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SnapEDA_Link",
+          "name": "SnapEDA_Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Availability",
+          "name": "Availability",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Purchase-URL",
+          "name": "Purchase-URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Check_prices",
+          "name": "Check_prices",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Price",
+          "name": "Price",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MF",
+          "name": "MF",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MP",
+          "name": "MP",
           "show": false
         }
       ],
